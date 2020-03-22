@@ -1,0 +1,9 @@
+Besides the drop-down search completion menu, I have implemented everything in the assignment brief.
+
+My program reads the two text files and constructs a graph structure representing the bus network. The graph's nodes are represented by the Stop class, and all Stop objects belong to three data structures. A HashMap maps each Stop's ID to the corresponding Stop object, enabling us to quickly match the trip data to the correct Stop object in constant time. Each Stop contains two adjacency lists containing the incoming and outgoing Connections from the Stop.
+
+To facilitate my program's search function, a Trie was implemented. A Trie effectively maps each Stop's name to the corresponding Stop object. Traversal is quicker than linear time as nodes that don't have the exact letters of the query at those specific indices are never visited. Methods in the Trie class were implemented to find an exact match to the query, and find all Stops that start with the query, which are then highlighted.
+
+To speed up mouse event handling, the Stops are also represented in a Quadtree. Each node on a Quadtree makes up equal quadrant regions of its parent's region, where the root node's region is the minimum 2D space required to represent all of the Stops we've processed. Each node can store 4 stops, reducing the chance of creating tall Quadtrees. Traversal is logarithmic time in the best case (clicked on or close to the stop), but approaches linear time if the click is far away from any stop as we there are less nodes we can rule out as having the closest stop to the click.
+
+Additionally, I have implemented mouse navigation using the scroll wheel to zoom, and mouse click and drag to pan.
