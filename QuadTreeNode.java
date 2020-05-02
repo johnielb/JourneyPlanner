@@ -9,9 +9,11 @@ import java.util.*;
  */
 
 public class QuadTreeNode {
-    private Set<Stop> stops;
+    private final Set<Stop> stops;
     final int MAX_SET_LENGTH = 4;
-    private Location origin, centre, bottomRight;
+    private final Location origin;
+    private final Location centre;
+    private final Location bottomRight;
     private QuadTreeNode[] children;
 
     public QuadTreeNode(Location origin, Location centre) {

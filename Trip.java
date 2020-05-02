@@ -2,8 +2,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Trip {
-    private String id;
-    private List<Stop> stops;
+    private final String id;
+    private final List<Stop> stops;
 
     public Trip(String id, List<Stop> stops) {
         this.id = id;

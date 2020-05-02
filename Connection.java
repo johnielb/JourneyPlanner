@@ -2,9 +2,9 @@ import java.awt.*;
 import java.util.Set;
 
 public class Connection {
-    private Stop from;
-    private Stop to;
-    private Trip trip;
+    private final Stop from;
+    private final Stop to;
+    private final Trip trip;
 
     public Connection(Stop from, Stop to, Trip trip) {
         this.from = from;

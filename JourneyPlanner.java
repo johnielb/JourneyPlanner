@@ -33,7 +33,7 @@ public class JourneyPlanner extends GUI {
 	// highlighted stops by mouse/search input
 	private Set<Stop> highlightedStops = new HashSet<>();
 	// highlighted trips based on highlighted stops
-	private Set<Trip> highlightedTrips = new HashSet<>();
+	private final Set<Trip> highlightedTrips = new HashSet<>();
 
 	public JourneyPlanner() {
 		redraw();

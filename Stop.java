@@ -3,10 +3,11 @@ import java.util.*;
 import java.util.List;
 
 public class Stop {
-    private String id, name;
-    private Location loc;
-    private List<Connection> incoming;
-    private List<Connection> outgoing;
+    private final String id;
+    private final String name;
+    private final Location loc;
+    private final List<Connection> incoming;
+    private final List<Connection> outgoing;
     private final Color color;
     private static double stopSize = 3;
 
